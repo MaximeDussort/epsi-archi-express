@@ -70,6 +70,9 @@ export default class Order {
     if (this.total === 0) {
       throw new Error("You can't cancel an empty cart");
     }
+    if (this.status != "paid") {
+      throw new Error("You can't cancel an non-paid order");
+    }
 
     this.status = "canceled";
     this.canceledAt = new Date();

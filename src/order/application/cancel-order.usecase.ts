@@ -19,7 +19,7 @@ export class CancelOrderUseCase {
     // j'utilise la propriété orderRepository
     const order = this.orderRepository.findById(orderId);
 
-    if (!order || order.status != "paid") {
+    if (!order) {
       throw new Error("Order not found");
     }
 
