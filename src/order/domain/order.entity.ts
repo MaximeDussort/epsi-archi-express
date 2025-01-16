@@ -1,3 +1,4 @@
+//Définie ce qu'est un Order et vérifie la pertinence des informations qu'il reçoit
 export default class Order {
   id: number;
 
